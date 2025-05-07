@@ -25,5 +25,15 @@
     "LICENSE",
     "dist/",
     "skeleton/"
+  ],
+  "keywords": [
+    "narraleaf",
+    "skeleton",
+    "react",
+    "typescript",
+    "nextjs",
+    "tailwindcss",
+    "nvl",
+    "visualnovel"
   ]
 }
