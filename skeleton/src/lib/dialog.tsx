@@ -10,7 +10,7 @@ export function GameDialog() {
                 <Nametag />
             </div>
             <div className="flex items-center gap-[5px]">
-                <Texts className="text-[22px] max-w-max pt-[63px] pl-[128px]" />
+                <Texts className="text-[22px] max-w-[1100px] pt-[63px] pl-[128px]" />
             </div>
         </Dialog>
     )
