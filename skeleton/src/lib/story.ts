@@ -44,14 +44,14 @@ scene1.action([
     character1
         .say`Hello, world!`
         .say`This is my first NarraLeaf story.`
-        .say`Start editing ${b(c("src/story.js", "blue"))} and enjoy the journey!`,
+        .say`Start editing ${b(c("src/lib/story.ts", "blue"))} and enjoy the journey!`,
 
     Menu.prompt("Start the journey")
         .choose(c("Yes I will!", "gray"), [
-            character1.say`Great! Let's start the journey!`
+            character1`Great! Let's start the journey!`
         ])
         .choose(c("No, I'm going to check the documentation", "gray"), [
-            character1.say`Sure! Take your time!`
+            character1`Sure! Take your time!`
         ])
 ]);
 

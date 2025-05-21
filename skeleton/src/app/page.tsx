@@ -18,13 +18,14 @@ function App() {
       aspectRatio: 16 / 9, // set the aspect ratio
 
       ratioUpdateInterval: 0, // disable the ratio update interval
-      cps: 50, // set the dialog characters per second
+      skipInterval: 10, // set the skip interval to 10ms
 
       dialog: GameDialog, // override the default dialog
       defaultTextColor: "white", // set the default text color
       defaultNametagColor: "white", // set the default nametag color
     });
-  }, [game]);
+    game.preference.setPreference("cps", 30); // set the dialog characters per second
+  }, []);
 
   // handle the player ready event
   function handleOnReady({liveGame}: PlayerEventContext) {
