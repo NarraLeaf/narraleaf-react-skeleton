@@ -21,7 +21,7 @@ const character1Image = new Image({
         xalign: 0.5,
         yalign: 0.4,
     },
-    scale: 0.6
+    zoom: 0.6
 });
 
 // Add actions to the scene
