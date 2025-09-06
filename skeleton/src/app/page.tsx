@@ -25,8 +25,8 @@ function App() {
 
       // set the default colors
       defaultTextColor: "white",
-      defaultNametagColor: "#2987a1",
       defaultMenuChoiceColor: "white",
+      defaultNametagColor: "#2987a1",
     });
     game.preference.setPreference("cps", 30); // set the dialog characters per second
   }, []);

@@ -26,11 +26,8 @@ const character1Image = new Image({
 
 // Add actions to the scene
 scene1.action([
-    scene1.background.show(),
     // Show the image for 1 second
-    character1Image.show({
-        duration: 1000,
-    }),
+    character1Image.show({ duration: 1000 }),
 
     // apply an animation to the image
     character1Image.transform(
@@ -41,6 +38,7 @@ scene1.action([
             .commit({ duration: 300, ease: "easeInOut" })
     ),
 
+    // Narrate something
     "I am Narrator. I will be your guide through this story.",
 
     // Say something
@@ -51,6 +49,7 @@ scene1.action([
 
     Menu.prompt("Start the journey")
         .choose("Yes I will!", [
+            // Short-hand for character1.say`Great! Let's start the journey!`
             character1`Great! Let's start the journey!`
         ])
         .choose(c("No, I'm going to check the documentation", "#d9dce3"), [

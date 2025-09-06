@@ -1,6 +1,6 @@
 {
   "name": "nlr-skeleton",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "NarraLeaf-React Skeleton",
   "bin": "./dist/index.js",
   "scripts": {
