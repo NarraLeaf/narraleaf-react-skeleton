@@ -28,3 +28,6 @@ yarn.lock
 
 /dist
 /temp
+
+.next
+next-env.d.ts

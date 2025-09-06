@@ -10,7 +10,7 @@ const story = new Story("My First NarraLeaf Story");
 // Create a new scene
 // The name of the scene should be unique and is used for debugging purposes
 const scene1 = new Scene("scene 1: hello world", {
-    background: "#f0f0f0",
+    background: "#eaeaef",
 });
 
 // then let's create a "character" with image
@@ -26,6 +26,7 @@ const character1Image = new Image({
 
 // Add actions to the scene
 scene1.action([
+    scene1.background.show(),
     // Show the image for 1 second
     character1Image.show({
         duration: 1000,
@@ -40,6 +41,8 @@ scene1.action([
             .commit({ duration: 300, ease: "easeInOut" })
     ),
 
+    "I am Narrator. I will be your guide through this story.",
+
     // Say something
     character1
         .say`Hello, world!`
@@ -47,10 +50,10 @@ scene1.action([
         .say`Start editing ${b(c("src/lib/story.ts", "blue"))} and enjoy the journey!`,
 
     Menu.prompt("Start the journey")
-        .choose(c("Yes I will!", "gray"), [
+        .choose("Yes I will!", [
             character1`Great! Let's start the journey!`
         ])
-        .choose(c("No, I'm going to check the documentation", "gray"), [
+        .choose(c("No, I'm going to check the documentation", "#d9dce3"), [
             character1`Sure! Take your time!`
         ])
 ]);

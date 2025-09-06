@@ -1,16 +1,55 @@
 import React from 'react';
-import { Dialog, Texts, Nametag } from "narraleaf-react";
+import { Dialog, Nametag, Texts, useDialog } from "narraleaf-react";
+import clsx from 'clsx';
+
+function SentenceContext() {
+    const { done } = useDialog();
+
+    return (
+        <>
+            <Texts className="text-[22px] max-w-max flex items-center" />
+            {/* Add inverted triangle and underline */}
+            <div className="flex flex-col items-center">
+                {/* Inverted triangle */}
+                <div className={clsx(
+                    "w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[10px] border-t-white",
+                    done ? 'opacity-100' : 'opacity-0'
+                )} />
+                {/* Underline */}
+                <div className="w-[12px] h-[2px] bg-white mt-[2px]" />
+            </div>
+        </>
+    );
+}
 
 export function GameDialog() {
+    const { isNarrator } = useDialog();
+
     return (
-        <Dialog className="rounded-lg p-6 shadow-lg w-full h-full mb-4 AlimamaFangYuanTiVF-Thin bg-contain bg-no-repeat bg-bottom relative" style={{
-            backgroundImage: "url('/ui/dialog.png')"
-        }}>
-            <div className="absolute left-[133px] flex justify-center w-[200px] top-[28px]">
-                <Nametag />
+        <Dialog
+            className={"absolute bottom-4 left-1/2 -translate-x-1/2 p-12 px-16 w-[90%] h-[216px]"}
+            style={{
+                backgroundImage: "url('/ui/game-dialog.png')",
+                backgroundSize: 'contain',
+                backgroundPosition: 'bottom',
+                backgroundRepeat: 'no-repeat'
+            }}
+        >
+            <div className={clsx("absolute left-[30px] -top-[15px]", {
+                "hidden": isNarrator
+            })}>
+                <Nametag
+                    className={"px-4 py-2 min-w-[220px] min-h-[56px] flex items-center justify-center text-primary"}
+                    style={{
+                        backgroundImage: "url('/ui/game-dialog-nametag.png')",
+                        backgroundSize: 'contain',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat'
+                    }}
+                />
             </div>
-            <div className="flex items-center gap-[5px]">
-                <Texts className="text-[22px] max-w-[1100px] pt-[63px] pl-[128px]" />
+            <div className="flex items-center gap-[5px] h-full">
+                <SentenceContext />
             </div>
         </Dialog>
     )

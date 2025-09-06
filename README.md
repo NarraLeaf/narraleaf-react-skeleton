@@ -13,7 +13,7 @@ For NarraLeaf, see [NarraLeaf](https://github.com/NarraLeaf/NarraLeaf)
 ## Usage
 
 ```bash
-npx nlr-skeleton <project-name>
+npx nlr-skeleton@latest <project-name>
 ```
 
 ## Docs

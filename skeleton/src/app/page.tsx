@@ -6,6 +6,7 @@ import { GameProviders, Player, PlayerEventContext, useGame } from "narraleaf-re
 // import your assets
 import { story } from "../lib/story";
 import { GameDialog } from "@/lib/dialog";
+import { GameMenu } from "@/lib/menu";
 
 function App() {
   const game = useGame();
@@ -18,11 +19,14 @@ function App() {
       aspectRatio: 16 / 9, // set the aspect ratio
 
       ratioUpdateInterval: 0, // disable the ratio update interval
-      skipInterval: 10, // set the skip interval to 10ms
 
       dialog: GameDialog, // override the default dialog
-      defaultTextColor: "white", // set the default text color
-      defaultNametagColor: "white", // set the default nametag color
+      menu: GameMenu, // override the default menu
+
+      // set the default colors
+      defaultTextColor: "white",
+      defaultNametagColor: "#2987a1",
+      defaultMenuChoiceColor: "white",
     });
     game.preference.setPreference("cps", 30); // set the dialog characters per second
   }, []);
