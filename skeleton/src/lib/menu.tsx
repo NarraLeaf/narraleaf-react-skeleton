@@ -12,7 +12,9 @@ function DefaultMenu({ items }: { items: number[] }) {
                     {items.map((index) => (
                         <Item
                             key={index}
-                            className="block md:w-3/4 lg:w-2/3 mx-auto text-center text-white text-lg py-3 px-6 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 hover:[filter:drop-shadow(8px_8px_0_rgba(0,0,0,0.8))]"
+                            className={`block md:w-3/4 lg:w-2/3 mx-auto text-center text-white text-lg py-3 px-6 hover:bg-white/10 transition-all 
+                                        duration-300 transform hover:-translate-y-1 hover:[filter:drop-shadow(8px_8px_0_rgba(0,0,0,0.8))] disabled:opacity-50 
+                                        disabled:cursor-not-allowed`}
                             style={{
                                 backgroundColor: "rgba(64,168,197,0.9)",
                                 clipPath: "polygon(0 0,100% 0,97% 100%,3% 100%)",
