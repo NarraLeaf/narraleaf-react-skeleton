@@ -11,7 +11,7 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "narraleaf-react": "^0.8.1",
-    "next": "15.3.1",
+    "next": "15.3.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
